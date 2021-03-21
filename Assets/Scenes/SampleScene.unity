@@ -5941,7 +5941,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -12162,6 +12162,7 @@ GameObject:
   - component: {fileID: 1463527639}
   - component: {fileID: 1463527638}
   - component: {fileID: 1463527637}
+  - component: {fileID: 1463527640}
   m_Layer: 0
   m_Name: SpawnEnemu
   m_TagString: Untagged
@@ -12232,6 +12233,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1463527640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463527636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3910eb4bca293840b2bc1a3f2c0ff0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemu: {fileID: 4423726258246810475, guid: af8eafedc54eac54e8f4754945616ca1, type: 3}
+  countWave: 0400000006000000080000000a000000
+  timeBeetwenWave: 6
 --- !u!1 &1469986662
 GameObject:
   m_ObjectHideFlags: 0
