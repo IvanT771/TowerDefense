@@ -9,6 +9,7 @@ public class Enemu : MonoBehaviour
     public int hp = 100;
 
 
+    public Transform body;
     private Transform target = null;
     private int currentIndexTarget = 0;
 
@@ -44,7 +45,12 @@ public class Enemu : MonoBehaviour
         if(target != null)
         {
             Vector3 dir = target.position - transform.position;
-            transform.Translate(dir.normalized*speed*Time.deltaTime);
+            transform.Translate(dir.normalized * speed*Time.deltaTime);
+
+            //look 
+            Quaternion look = Quaternion.LookRotation(dir);
+            Vector3 rot = look.eulerAngles;
+            body.transform.eulerAngles = new Vector3(0,rot.y,0);
 
             if(Vector3.Distance(target.position,transform.position) < 0.25f)
             {

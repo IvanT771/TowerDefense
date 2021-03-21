@@ -16,10 +16,11 @@ public class SpawnEnemu : MonoBehaviour
     IEnumerator Spawn()
     {
         if (currentWave >= countWave.Length || enemu == null) {yield return null;}
+
         for (int i = 0; i < countWave[currentWave]; i++)
         {
             Instantiate(enemu,transform.position,Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
         currentWave++;
     }

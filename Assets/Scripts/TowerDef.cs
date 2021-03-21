@@ -21,6 +21,7 @@ public class TowerDef : MonoBehaviour
     }
     void FindEnemu()
     {
+        if(target != null) { return;}
         
         GameObject[] enemus = GameObject.FindGameObjectsWithTag("Enemu");
         Transform enemu = null;
@@ -48,9 +49,16 @@ public class TowerDef : MonoBehaviour
         if (target == null) { return;}
 
         countTime+=Time.deltaTime;
-        if(Vector3.Distance(transform.position, target.position) <= range && countTime >= timeRange)
+        if( countTime >= timeRange)
         {
-            Shoot();
+            if(Vector3.Distance(transform.position, target.position) <= range)
+            { 
+                Shoot();
+            }else
+            {
+                target = null;
+            }
+
             countTime = 0;
         }
     }
