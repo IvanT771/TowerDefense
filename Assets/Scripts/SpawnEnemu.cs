@@ -25,6 +25,7 @@ public class SpawnEnemu : MonoBehaviour
         currentWave++;
     }
 
+
     private void Update()
     {
         if (countTime >= timeBeetwenWave)
