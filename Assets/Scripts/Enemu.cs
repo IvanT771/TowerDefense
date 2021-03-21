@@ -6,12 +6,21 @@ public class Enemu : MonoBehaviour
 {
     [Header("Atribute")]
     public float speed = 10f;
+    public int hp = 100;
 
 
     private Transform target = null;
     private int currentIndexTarget = 0;
 
 
+    public void Damage(int damag)
+    {
+        hp-=damag;
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
