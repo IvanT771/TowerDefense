@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TowerDef : MonoBehaviour
 {
-   // public Transform ball;
-  //  public Transform shootPoint;
+    public Transform ball;
+    public Transform shootPoint;
 
     private Transform target;
     public float range = 15f;
@@ -65,15 +65,9 @@ public class TowerDef : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("SHOOT!");
-        if (target.CompareTag("Enemu"))
-        {
-            var en = target.GetComponent<Enemu>();
-            if(en != null)
-            {
-                en.Damage(forceDamag);
-            }
-        }
+        if(target == null) { return;}
+        var bal = Instantiate(ball,shootPoint.position,Quaternion.identity);
+        bal.GetComponent<Bullet>().InitializeBullet(target,forceDamag);
     }
 
     private void OnDrawGizmosSelected()
