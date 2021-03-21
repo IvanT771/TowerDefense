@@ -32,13 +32,13 @@ public class Bullet : MonoBehaviour
             HitTarget();
             return;
         }
-        transform.Translate(dir.normalized*distanceThisFrame,Space.World);
+        transform.Translate(dir.normalized*distanceThisFrame);
     }
 
     private void HitTarget()
     {
-        GameObject ef = Instantiate(impactEffect);
-        Destroy(ef,2f);
+        GameObject ef = Instantiate(impactEffect,transform.position,Quaternion.identity); 
+        Destroy(ef,3f);
 
         target.GetComponent<Enemu>().Damage(forceDanage);
         Destroy(gameObject);
