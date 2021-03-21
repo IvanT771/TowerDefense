@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class TowerDef : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform ball;
+    public Transform shootPoint;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
