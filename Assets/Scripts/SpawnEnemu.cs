@@ -15,27 +15,25 @@ public class SpawnEnemu : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        if (currentWave >= countWave.Length || enemu == null) {yield return null;}
-
-        for (int i = 0; i < countWave[currentWave]; i++)
+        if (currentWave < countWave.Length) { 
+        int count = countWave[currentWave];
+        for (int i = 0; i < count; i++)
         {
             Instantiate(enemu,transform.position,Quaternion.identity);
             yield return new WaitForSeconds(1f);
         }
-        currentWave++;
+        currentWave++; }
     }
 
 
     private void Update()
     {
+        if (currentWave >= countWave.Length){return;}
+
         if (countTime >= timeBeetwenWave)
         {
            
             countTime = 0;
-            if (currentWave >= countWave.Length)
-            {
-                return;
-            }
             StartCoroutine(Spawn());
         }
         countTime+=Time.deltaTime;
