@@ -32,7 +32,8 @@ public class Bullet : MonoBehaviour
             HitTarget();
             return;
         }
-        transform.Translate(dir.normalized*distanceThisFrame);
+        transform.Translate(dir.normalized*distanceThisFrame,Space.World);
+        transform.Rotate(3,2,1,Space.World);
     }
 
     private void HitTarget()

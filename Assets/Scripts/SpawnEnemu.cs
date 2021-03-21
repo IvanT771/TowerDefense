@@ -11,10 +11,13 @@ public class SpawnEnemu : MonoBehaviour
     public float frequency = 2f;
 
     private int currentWave = 0;
-    private float countTime = 3f;
+    private float countTime = 10f;
 
-   
 
+    private void Start()
+    {
+        countTime=timeBeetwenWave-5;
+    }
     IEnumerator Spawn()
     {
         if (currentWave < countWave.Length) { 
