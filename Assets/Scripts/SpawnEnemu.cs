@@ -8,6 +8,8 @@ public class SpawnEnemu : MonoBehaviour
     public int[] countWave;
     public float timeBeetwenWave = 6f; //Задержка между волнами
 
+    public float frequency = 2f;
+
     private int currentWave = 0;
     private float countTime = 3f;
 
@@ -20,7 +22,7 @@ public class SpawnEnemu : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             Instantiate(enemu,transform.position,Quaternion.identity);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(frequency);
         }
         currentWave++; }
     }

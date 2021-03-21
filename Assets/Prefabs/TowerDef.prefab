@@ -98,7 +98,7 @@ MonoBehaviour:
   ball: {fileID: 1139983481095162163, guid: d967a17c31d8fbf40a66601a0b939919, type: 3}
   shootPoint: {fileID: 4190888331901074764}
   range: 15
-  forceDamag: 35
+  forceDamag: 20
   timeRange: 1
 --- !u!1 &2852638776450457439
 GameObject:
