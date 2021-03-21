@@ -18,6 +18,7 @@ public class Enemu : MonoBehaviour
     public void Damage(int damag)
     {
         hp-=damag;
+        healthBar.enabled = true;
         healthBar.fillAmount = ((float)hp)/100f;
         if (hp < 70)
         {
