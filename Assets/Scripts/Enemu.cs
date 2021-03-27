@@ -10,6 +10,8 @@ public class Enemu : MonoBehaviour
     public int hp = 100;
     public Image healthBar;
 
+    public Transform antiLow;
+
     public Transform body;
     private Transform target = null;
     private int currentIndexTarget = 0;
@@ -31,6 +33,7 @@ public class Enemu : MonoBehaviour
 
         if (hp <= 0)
         {
+            Instantiate(antiLow.gameObject,transform.position,transform.rotation);
             Destroy(gameObject);
         }
     }

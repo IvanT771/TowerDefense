@@ -241,6 +241,7 @@ MonoBehaviour:
   speed: 3
   hp: 100
   healthBar: {fileID: 5706159860988729551}
+  antiLow: {fileID: 5077832893928742314, guid: 2f4a848505033a44c9f5c9bce96474d1, type: 3}
   body: {fileID: 1617521756833380959}
 --- !u!1001 &1294835516477906356
 PrefabInstance:
